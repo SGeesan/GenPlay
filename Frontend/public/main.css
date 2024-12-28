@@ -1,0 +1,139 @@
+body{
+    background-color: black;
+    color: aliceblue;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+/* ################# Title Bar ################# */
+.TitleBar {
+    background-color: rgb(18, 0, 40);
+    display: flex;
+    align-items: center; /* Vertically centers items inside */
+    justify-content:start;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.TitleBar .logo {
+    padding-right: 10px; /* Adds space between the logo and title */
+}
+
+.TitleName {
+    display: flex;
+    align-items: flex-end; /* Vertically align title and subtitle inside TitleName */
+    margin-left: 25px;
+}
+
+.TitleName h1{
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.TitleName h1 b{
+    color: red;
+}
+.TitleName h3 {
+    color: #b9b9b9;
+    font-size: small;
+    margin: 0;
+    min-width: 150px;
+}
+.TitleBar div.right-tile{
+    display: block;
+    flex-grow: 1;
+}
+.TitleBar div.searchBar{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    overflow: hidden;
+    width: 70%;
+}
+.TitleBar div.searchBar button.searchButton{
+    color:rgb(0, 8, 255);
+    margin-right: 10px;
+    background-color: #023c4d;
+    border-radius: 50%;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.TitleBar div.searchBar button.searchButton:hover{
+    background-color: #047395;
+    color: #161616;
+}
+.TitleBar div.searchBar input[type="text"]{
+    border-radius: 20px;
+    line-height: 40px;
+    background-color: #161616;
+    min-width: 350px;
+    color: #fff;
+    padding: 10px;
+    flex-grow: 1;
+}
+/* ############### Nav bar ################ */
+nav{
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+div.topnav{
+    display: flex;
+    background-color: #0242aa;
+    overflow: hidden;
+    justify-content:space-around;
+    padding: 0;
+    margin: 0;
+}
+div.topnav a{
+    width:20%;
+    list-style: none;
+    color: rgb(202, 200, 255);
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+div.topnav a i{
+    margin-right: 10px;
+}
+
+div.topnav a b{
+    font-weight:400;
+}
+
+div.topnav a:hover{
+    color: black;
+    background-color: red;
+}
+
+/*#################Main-suggestions#######################*/
+#Home{
+    padding: 10px 0px;
+}
+.mainSuggestGrid{
+    background-image:url('bg1.png');
+    background-size: cover;
+    width: 90%;
+    height: 100vh;
+    padding: 10px;
+    border: 1px solid white;
+    margin: auto;
+}
+
+@media screen and (max-width:800px) {
+    div.topnav a b{
+        display: none;
+    }
+    .TitleBar div.searchBar input[type="text"]{
+        width: 100%;
+        overflow: hidden;
+    }
+}
